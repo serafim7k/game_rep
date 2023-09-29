@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: blueviolet;
+}
+
+.game{
+    width: 1500px;
+    height: 400px;
+    background-color: gray;
+    border: 1px solid white;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 150px;
+}
+
+#try{
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#mario{
+    background-image: url('../images/mario.png');
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 200px;
+    bottom: 5px;
+}
+
+#tree{
+    background-image: url('../images/tree.png');
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    animation: treeMov 3s infinite cubic-bezier(.65,.55,.65,1.06);
+}
+
+@keyframes treeMov{
+    0%{
+        left: 1500px;
+    }
+    100%{
+        left: -100px;
+    }
+}
+
+.jump{
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump{
+    0%{
+        bottom: 0px;
+    }
+    25%{
+        bottom: 140px;
+    }
+    50%{
+        bottom: 200px;
+    }
+    75%{
+        bottom: 140px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
